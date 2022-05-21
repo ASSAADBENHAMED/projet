@@ -15,12 +15,10 @@ export const Login= (userData , nav) => async(dispatch) =>{
     try {
        const res = await axios.post('/api/person/login',userData);
        dispatch({type: LOGIN_SUCCESS, payload:res.data});
-       if (res.data.existEtudiant.role === 'etudiant') {
+       if (res.data.existUser.role === 'etudiant') {
          nav('/Profil')  ;  
-       } else if  (res.data.existEtudiant.role === 'engseinant') 
-          {
-            nav('/Profilens') ;
-       } else if (res.data.existEtudiant.role === 'admin')
+       
+       } else if (res.data.existUser.role === 'admin')
            {
             nav('/dashboard') ;
        }

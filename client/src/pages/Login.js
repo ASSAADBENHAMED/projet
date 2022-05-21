@@ -9,7 +9,7 @@ const Login = () => {
  
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
-  const  loginetudiant = (data) => { 
+  const  loginUser = (data) => { 
     dispatch(signinAction(data,nav));
   }; 
   const nav = useNavigate();
@@ -20,7 +20,7 @@ const Login = () => {
   return ( 
     <div className="container">
     
-    <form className="form" onSubmit={handleSubmit( loginetudiant)}>
+    <form className="form" onSubmit={handleSubmit(  loginUser)}>
         <h1>Sign_in</h1>
         <div className="form-field">
              <label >Email:</label>

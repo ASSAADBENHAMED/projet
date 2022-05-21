@@ -8,7 +8,7 @@ const Signup = () => {
   const { register, handleSubmit } = useForm();
  
   const dispatch = useDispatch();
-  const  registerNewetudiant = (data) => { 
+  const  registerNewUser = (data) => { 
     dispatch(registerAction(data,nav));
   };
   // const {isAuth} = useSelector(state=>state.user.userInfo);
@@ -17,7 +17,7 @@ const Signup = () => {
   //   }, [isAuth, nav]);
   return (
     <div className="container">
-    <form className="form"  onSubmit={handleSubmit( registerNewetudiant)}>
+    <form className="form"  onSubmit={handleSubmit( registerNewUser)}>
     <h1>Sign_up</h1> 
     <br/>
     <div className="form-field">

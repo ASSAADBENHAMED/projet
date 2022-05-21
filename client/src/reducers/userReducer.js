@@ -13,15 +13,15 @@ const userReducer = (state = initState ,{type, payload}) =>{
           return {...state ,errors:payload }
       case REGISTER_SUCCESS :    
           return{...state,
-            personInfo :payload.newEtudiant ,
+            personInfo :payload.newUser ,
                errors:null , 
             };
        case  LOGIN_SUCCESS: 
        localStorage.setItem('token',payload.token);
        localStorage.setItem('isAuth',true);
-       localStorage.setItem('persionInfo', JSON.stringify(payload.existEtudiant))
+       localStorage.setItem('persionInfo', JSON.stringify(payload.existUser))
            return {...state,
-            personInfo :payload.existEtudiant,
+            personInfo :payload.existUser,
             token:payload.token,
             isAuth:true,
         errors:null,
