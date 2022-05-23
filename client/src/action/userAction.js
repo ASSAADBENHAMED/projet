@@ -15,13 +15,9 @@ export const Login= (userData , nav) => async(dispatch) =>{
     try {
        const res = await axios.post('/api/person/login',userData);
        dispatch({type: LOGIN_SUCCESS, payload:res.data});
-       if (res.data.existUser.role === 'etudiant') {
-         nav('/Profil')  ;  
+       if (res.data.existUser.role === 'user')  nav('/Profil')  ;  
+       else if (res.data.existUser.role === 'admin')  nav('/dashboard') ;
        
-       } else if (res.data.existUser.role === 'admin')
-           {
-            nav('/dashboard') ;
-       }
     } catch (error) {
         dispatch({type:LOGIN_FAIL,
              payload:

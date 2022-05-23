@@ -20,7 +20,7 @@ const Login = () => {
   return ( 
     <div className="container">
     
-    <form className="form" onSubmit={handleSubmit(  loginUser)}>
+    <form className="form" onSubmit={handleSubmit(loginUser)}>
         <h1>Sign_in</h1>
         <div className="form-field">
              <label >Email:</label>

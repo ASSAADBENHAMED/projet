@@ -2,7 +2,7 @@ const Person = require("../models/personModel");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-//@desc Register a new Person(def role: Etudiant)
+//@desc Register a new Person(def role: User)
 //@params POST /api/person/register
 //@acces PUBLIC
 exports.register = async (req, res) => {

@@ -9,7 +9,7 @@ app.use(cors('http://localhost:5000'));
 
 //Routres
 app.use('/api/person',require('./routes/personRoutes'));
-
+app.use('/api/product',require('./routes/productRoutes'));
 //connection to database
 const connectDB =require('./config/connectDB');
 connectDB();
