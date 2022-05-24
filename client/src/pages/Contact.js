@@ -1,14 +1,28 @@
-import React from 'react';
+import React , { useRef ,useState} from 'react';
 import './contact.css';
+import emailjs from '@emailjs/browser';
 const Contact = () => {
  
+ 
 
-
-
-    const sendEmail = (e) => {
-        e.preventDefault()
+      const [result , setResult] = useState(false)
+      const form = useRef();
+  
+      const sendEmail = (e) => {
+        e.preventDefault();
         
-    };
+        
+
+    emailjs.sendForm('service_ch0dw1k', 'template_mgbx899', form.current, 'PARqaGz3Gb7nzRd70')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+    setResult(true)
+    e.target.reset()
+    setTimeout(()=>setResult(false),5000)
+};
    
   return (
     <div className="container">

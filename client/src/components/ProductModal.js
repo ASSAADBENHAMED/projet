@@ -1,7 +1,7 @@
 import { Fragment ,useState } from 'react';
 import {Button,Modal} from 'react-bootstrap'
 import { useForm  } from 'react-hook-form';
-import { useDispatch ,  useSelector} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addProducts } from '../action/productActions';
 
 

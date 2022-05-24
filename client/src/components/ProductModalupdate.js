@@ -1,7 +1,7 @@
 import { Fragment ,useState } from 'react';
 import {Button,Modal} from 'react-bootstrap'
 import { useForm  } from 'react-hook-form';
-import { useDispatch ,  useSelector} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { updateProducts as updateProductAction } from '../action/productActions';
 
 
@@ -26,7 +26,7 @@ function productModalupdate(product) {
         </Button>
   
         <Modal show={show} onHide={handleClose}>
-         <form onSubmit={handleSubmit(updateProduct)}>
+         <form onSubmit={handleSubmit(updateProducts)}>
          <label htmlFor='title'>title</label>
          <input id='title' type='text' {...register('title')}  required/><br/>
          <label htmlFor='description'>description</label>
