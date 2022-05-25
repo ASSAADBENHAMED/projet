@@ -7,13 +7,13 @@ import { addProducts } from '../action/productActions';
 
 function productModal() {
   const dispatch = useDispatch();
-  const [file , setFile]= useState();
-    const [show, setShow] = useState(false);
+  const [file , setFile]= useState ();
+    const [show, setShow] = useState (false);
 
-    const handleClose = () => setShow(false);
+    const handleClose = () => setShow(false); 
     const handleShow = () => setShow(true);
 
-    const { register, handleSubmit ,reset} = useForm();
+    const { register, handleSubmit ,reset} = useForm;
     const  addNewProduct = (data) => { 
       dispatch(addProducts({...data , file}));
       reset();

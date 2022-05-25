@@ -1,12 +1,13 @@
 import { Fragment ,useState } from 'react';
 import {Button,Modal} from 'react-bootstrap'
-import { useForm  } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
+import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
 import { updateProducts as updateProductAction } from '../action/productActions';
 
 
 
 function productModalupdate(product) {
+  
   const dispatch = useDispatch();
   const [file , setFile]= useState();
     const [show, setShow] = useState(false);
@@ -14,7 +15,7 @@ function productModalupdate(product) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const { register, handleSubmit ,reset} = useForm({defaultValues:{...product}});
+    const { register, handleSubmit ,reset} = useForm ({defaultValues:{...product}});
     const  updateProducts= (data) => { 
       dispatch(updateProductAction({...data , file}));
       reset();

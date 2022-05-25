@@ -37,7 +37,7 @@ const Signup = () => {
     </div>
     <div className="form-field">
     <label >Password:</label>
-    <input required type='password' placeholder="Enter a strong password"  {...register('Password')}/>
+    <input required type='password' placeholder="Enter a strong password"  {...register('password')}/>
     <br/>
      </div>
      <div className="form-field">
