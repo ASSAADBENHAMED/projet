@@ -23,12 +23,13 @@ const logout= (e) =>{
           </Fragment>
           ):(
           <Fragment> 
-            <Link to='/Login'> Login </Link> 
-            <Link to='/Signup'>Signup</Link> 
+            <Link to='/Login'> Login </Link>|
+            <Link to='/Signup'>Signup</Link> |
+            <Link to='/Contact'>Contact</Link>
           </Fragment>
        )
       };
-      <Link to='/Contact'>Contact</Link> 
+      
     </div>
 
    

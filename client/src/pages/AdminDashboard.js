@@ -2,8 +2,8 @@ import { Fragment } from 'react';
 import {useEffect} from 'react';
 import { useDispatch ,useSelector } from 'react-redux';
 import { deleteProducts, getProducts } from '../action/productActions';
-import {ProductModal} from '../components/ProductModal';
-import {ProductModelupdate } from '../components/ProductModalupdate';
+import ProductModal from '../components/ProductModal';
+import ProductModelupdate  from '../components/ProductModalupdate';
 const AdminDashboard = () => {
  const dispatch = useDispatch();
  const {productList , loading} =useSelector(state=>state.product)

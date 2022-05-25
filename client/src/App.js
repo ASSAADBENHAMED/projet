@@ -21,11 +21,12 @@ function App() {
     <Route path='/' element={<Home />} />
     <Route path='/Signup' element={<Signup/>} />
     <Route path='/Login' element={<Login/>} />
+   <Route path='/Contact' element={<Contact/>} />
    
-    <Route path='/Contact' element={<Contact/>} />
-    <Route element={<ProtectRouter/>}>
+   <Route element={<ProtectRouter/>}>
     <Route path='/Profil' element={<Profil />} />
     {/**/}
+   
     </Route>
     <Route element={<AdminProdectRouter />}>
     <Route path='/Dashboard' element={<AdminDashboard />} />
